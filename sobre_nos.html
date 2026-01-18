@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | MoraBurger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">Mora<span>Burger</span></a>
+            <div class="search-container" style="visibility: hidden; pointer-events: none;"><input type="text"></div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdownMobile(event)" style="color: #fff;">Categorias <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="combos.html">Combos</a></li>
+                            <li><a href="promocoes.html">Promoções</a></li>
+                            <li><a href="destaques.html">Mais Pedidos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sobre_nos.html" style="color:var(--cor-destaque-start)">Sobre</a></li>
+                    <li><button class="btn-destaque" onclick="toggleContato()">Contato</button></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-icon" onclick="toggleMenu()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-hero">
+                    <h1 class="animate-up">Muito mais que <br><span>Carne e Queijo</span></h1>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Nossa História</h3>
+                        <p>Tudo começou com uma chapa quente, ingredientes frescos e uma ideia fixa: <strong>o hambúrguer perfeito existe?</strong></p>
+                        <p>O MoraBurger nasceu em Francisco Morato não apenas para vender lanches, mas para criar experiências. Cansados do "mais do mesmo", decidimos voltar às origens: carne moída no dia, pão selado na manteiga e molhos feitos artesanalmente.</p>
+                        <p>Aqui, cada pedido é tratado como se fosse o único. Não é fast-food, é <strong>Good Food</strong>.</p>
+                    </div>
+                    
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-fire"></i>
+                            <h4>100% Artesanal</h4>
+                            <p>Nada congelado. Blend de carnes frescas preparado diariamente.</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-motorcycle"></i>
+                            <h4>Entrega Flash</h4>
+                            <p>Chega quente na sua casa. Nossa logística é cronometrada.</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>Feito com Amor</h4>
+                            <p>De Morato para Morato. Valorizamos nossa comunidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <a href="index.html#menu" class="btn-hero">Bateu a Fome? Peça Agora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer"><div class="container"><p>&copy; 2025 MoraBurger. O Sabor da Cidade.</p></div></footer>
+    <button class="botao-flutuante-carrinho" onclick="toggleCarrinho()"><i class="fas fa-shopping-cart"></i><div id="contador-carrinho">0</div></button>
+    <div class="carrinho-container" id="carrinho-modal">
+        <div class="carrinho-header"><h3>Seu Pedido</h3><i class="fas fa-times" onclick="toggleCarrinho()"></i></div>
+        <div class="carrinho-itens" id="lista-itens-carrinho"></div>
+        <div class="carrinho-footer">
+            <div class="total-texto">Total: <span id="total-carrinho">R$ 0,00</span></div>
+            <input type="text" id="nome-cliente" placeholder="Seu Nome" class="input-dados">
+            <input type="text" id="endereco-cliente" placeholder="Endereço" class="input-dados">
+            <select id="forma-pagamento" class="input-dados"><option>Pix</option><option>Cartão</option><option>Dinheiro</option></select>
+            <button class="btn-whatsapp-finalizar" onclick="finalizarPedidoWhatsapp()"><i class="fab fa-whatsapp"></i> Enviar Pedido</button>
+        </div>
+    </div>
+    
+    <div id="modal-contato" class="modal-overlay">
+        <div class="modal-box">
+            <i class="fas fa-times close-modal" onclick="toggleContato()"></i>
+            <h3>Siga-nos</h3>
+            <p>Acompanhe nossas novidades:</p>
+            <div class="social-links">
+                <a href="#" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
