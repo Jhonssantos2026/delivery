@@ -17,13 +17,13 @@ const cardapioItens = [
 ];
 
 let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-const NUMERO_ZAP = "5511913257453"; // Coloque seu número aqui
+const NUMERO_ZAP = "5511913257453"; 
 
 document.addEventListener('DOMContentLoaded', () => {
     atualizarCarrinho();
     const containerGrade = document.getElementById('grade-produtos');
     
-    // Se tiver grade (páginas internas), renderiza ela. Se não (home), renderiza carrossel.
+   
     if (containerGrade) {
         renderizarGrade(containerGrade.getAttribute('data-categoria'));
     } else {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* Renderiza os carrosséis da Home */
+
 function renderizarCardapio(lista) {
     const containers = { 
         combos: document.getElementById('container-combos'), 
@@ -41,7 +41,7 @@ function renderizarCardapio(lista) {
         destaques: document.getElementById('container-destaques') 
     };
     
-    // Se não estiver na home, sai da função
+    
     if(!containers.combos) return;
 
     Object.values(containers).forEach(c => c.innerHTML = '');
@@ -60,7 +60,7 @@ function renderizarCardapio(lista) {
     });
 }
 
-/* Renderiza a grade nas páginas específicas */
+
 function renderizarGrade(categoriaAlvo) {
     const container = document.getElementById('grade-produtos');
     const itens = cardapioItens.filter(item => item.categoria === categoriaAlvo);
@@ -162,11 +162,11 @@ function finalizarPedidoWhatsapp() {
 
 function toggleContato() { document.getElementById('modal-contato').classList.toggle('active'); }
 
-/* FUNÇÃO ESSENCIAL PARA O MENU MOBILE VERTICAL */
+
 function toggleDropdownMobile(event) {
     if (window.innerWidth <= 768) {
         event.preventDefault();
-        // Acha o elemento pai (.dropdown) e alterna a classe 'ativo' para abrir o accordion
+        
         event.target.closest('.dropdown').classList.toggle('ativo');
     }
 }

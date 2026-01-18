@@ -26,7 +26,7 @@ button { cursor: pointer; font-family: inherit; }
 .logo { font-family: 'Poppins', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
 .logo span { background: linear-gradient(45deg, var(--cor-destaque-start), var(--cor-destaque-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* MENU DROPDOWN (PC) */
+/* MENU (PC) */
 .dropdown { position: relative; height: 100%; display: flex; align-items: center; }
 .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: rgba(15, 15, 17, 0.98); min-width: 200px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); padding: 15px 0; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px); z-index: 10000; flex-direction: column; opacity: 0; transition: opacity 0.3s ease; }
 .dropdown:hover .dropdown-menu { display: flex; opacity: 1; animation: slideUpFade 0.3s ease forwards; }
@@ -50,7 +50,7 @@ button { cursor: pointer; font-family: inherit; }
 .mobile-menu-icon { display: none; cursor: pointer; flex-shrink: 0; padding: 5px; }
 .mobile-menu-icon div { width: 28px; height: 3px; background: #fff; margin: 6px 0; border-radius: 5px; }
 
-/* HERO */
+
 .hero-slider { position: relative; min-height: 700px; display: flex; align-items: center; background: radial-gradient(circle at 70% 50%, rgba(255, 193, 7, 0.08) 0%, var(--cor-fundo) 70%); overflow: hidden; width: 100%; }
 .slide-split-content { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 50px; }
 .hero-text { flex: 1; max-width: 600px; z-index: 2; }
@@ -136,7 +136,7 @@ button { cursor: pointer; font-family: inherit; }
 .btn-whatsapp-finalizar { width: 100%; padding: 15px; background: var(--cor-zap); color: #fff; font-weight: 800; border-radius: 10px; }
 .main-footer { text-align: center; padding: 40px; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.05); color: #666; }
 
-/* ================= MOBILE (MENU VERTICAL COM EFEITO SANFONA) ================= */
+
 @media (max-width: 768px) {
     html, body { overflow-x: hidden; position: relative; width: 100%; }
     .header-content { flex-wrap: nowrap; gap: 10px; justify-content: space-between; }
@@ -144,7 +144,7 @@ button { cursor: pointer; font-family: inherit; }
     .mobile-menu-icon { display: block; font-size: 1.5rem; flex-shrink: 0; }
     .search-container { width: 100%; padding: 6px 12px; max-width: none; }
     
-    /* Configuração do "Drawer" (Gaveta Lateral) */
+    /* Configuração (Gaveta Lateral) */
     .main-nav { 
         position: fixed; 
         top: 0; 
@@ -154,20 +154,20 @@ button { cursor: pointer; font-family: inherit; }
         background: rgba(15,15,17,0.98); 
         backdrop-filter: blur(20px); 
         display: flex; 
-        flex-direction: column; /* Garante que é coluna */
-        justify-content: flex-start; /* Começa do topo */
-        padding-top: 80px; /* Espaço para não ficar colado no topo */
+        flex-direction: column;
+        justify-content: flex-start; 
+        padding-top: 80px; 
         transition: 0.4s; 
         box-shadow: -10px 0 30px rgba(0,0,0,0.8); 
         z-index: 2001; 
     }
     .main-nav.active { right: 0; }
 
-    /* CORREÇÃO DO MENU: LISTA VERTICAL */
+    
     .main-nav ul {
-        flex-direction: column; /* Força os itens a ficarem um embaixo do outro */
+        flex-direction: column;  
         width: 100%;
-        gap: 20px; /* Espaço entre Início, Categorias, Sobre... */
+        gap: 20px;  
         align-items: center;
     }
     
@@ -185,11 +185,10 @@ button { cursor: pointer; font-family: inherit; }
     .about-hero h1 { font-size: 2.5rem; }
     .about-stats-grid { grid-template-columns: 1fr; }
     
-    /* ZERA A CONFIGURAÇÃO DE FLEXBOX E ALTURA DO PC PARA O DROPDOWN */
+    
     .dropdown {
         display: flex !important;
-        flex-direction: column !important; /* Itens um embaixo do outro */
-        height: auto !important;
+        flex-direction: column !important; 
         width: 100%;
         align-items: center;
         padding: 5px 0;
@@ -203,9 +202,9 @@ button { cursor: pointer; font-family: inherit; }
         left: 0 !important;
         transform: none !important;
         
-        display: none !important; /* Começa fechado */
+        display: none !important; 
         
-        background: rgba(255,255,255,0.03) !important; /* Um fundo leve pra diferenciar */
+        background: rgba(255,255,255,0.03) !important; 
         box-shadow: none !important;
         padding: 10px 0;
         margin-top: 10px;
