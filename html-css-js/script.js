@@ -67,7 +67,7 @@ function renderizarGrade(categoriaAlvo) {
     container.innerHTML = itens.length === 0 ? '<h3 style="color:#fff;">Nenhum item encontrado.</h3>' : itens.map(criarHTMLCard).join('');
 }
 
-/* Cria o HTML do Card de Produto */
+/* Card de Produto */
 function criarHTMLCard(item) {
     const precoHTML = item.precoAntigo ? 
         `<div class="price-tag-promo"><span class="preco-antigo">R$ ${item.precoAntigo.toFixed(2)}</span><span class="preco-novo">R$ ${item.preco.toFixed(2)}</span></div>` : 
@@ -105,7 +105,7 @@ function filtrarItens(termo) {
 }
 function limparBusca() { document.getElementById('input-busca').value = ""; filtrarItens(""); }
 
-/* Scroll Horizontal (Setinhas) */
+
 function inicializarScroll() {
     document.querySelectorAll('.row-container').forEach(cont => {
         const row = cont.querySelector('.netflix-row');
