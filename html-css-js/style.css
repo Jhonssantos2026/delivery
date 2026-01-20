@@ -144,7 +144,7 @@ button { cursor: pointer; font-family: inherit; }
     .mobile-menu-icon { display: block; font-size: 1.5rem; flex-shrink: 0; }
     .search-container { width: 100%; padding: 6px 12px; max-width: none; }
     
-    /* Configuração Lateral */
+    /* Configuração Menu Lateral */
     .main-nav { 
         position: fixed; 
         top: 0; 
